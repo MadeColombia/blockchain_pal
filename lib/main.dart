@@ -10,7 +10,7 @@ class MyApp extends StatefulWidget { //para convertir de sin estado a con estado
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Material App',
       home: Scaffold(

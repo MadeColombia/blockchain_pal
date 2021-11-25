@@ -19,46 +19,44 @@ class HomeState extends State<Registro>{
   }
 }
 Widget cuerpo(){
-  return Container(
-    child: Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          img(),
-          const SizedBox(
-            height:20
-          ),
-          nombre(),
-          const SizedBox(
-            height:10
-          ),
-          email(),
-          const SizedBox(
-            height:10
-          ),
-          contrasena(),
-          const SizedBox(
-            height:10
-          ),
-          EnterRoute(),
-          const SizedBox(
-            height:10
-          ),
-          TextlineWidget(),
-          const SizedBox(
-            height:20
-          ),
-          FacebookRoute(),
-          const SizedBox(
-            height:10
-          ),
-          Terminos(),
-          const SizedBox(
-            height:20
-          ),
-          Ini()
-        ]
-      )
+  return Center(
+    child: Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        img(),
+        const SizedBox(
+          height:20
+        ),
+        nombre(),
+        const SizedBox(
+          height:10
+        ),
+        email(),
+        const SizedBox(
+          height:10
+        ),
+        contrasena(),
+        const SizedBox(
+          height:10
+        ),
+        EnterRoute(),
+        const SizedBox(
+          height:10
+        ),
+        TextlineWidget(),
+        const SizedBox(
+          height:20
+        ),
+        FacebookRoute(),
+        const SizedBox(
+          height:10
+        ),
+        Terminos(),
+        const SizedBox(
+          height:20
+        ),
+        Ini()
+      ]
     )
   );
 }
@@ -162,7 +160,7 @@ class TextlineWidget extends StatelessWidget {
       
       child: Stack(
         children: <Widget>[
-          Positioned(
+          const Positioned(
         top: 14,
         left: 0,
         child: Divider(
@@ -170,7 +168,7 @@ class TextlineWidget extends StatelessWidget {
         thickness: 1
       )
       
-      ),Positioned(
+      ),const Positioned(
         top: 14,
         left: 213,
         child: Divider(
@@ -178,10 +176,10 @@ class TextlineWidget extends StatelessWidget {
         thickness: 1
       )
       
-      ),Divider(
+      ),const Divider(
         color: Color.fromRGBO(199, 201, 217, 1),
         thickness: 1
-      ),Positioned(
+      ),const Positioned(
         top: 0,
         left: 177,
         child: Text('ó', textAlign: TextAlign.center, style: TextStyle(
@@ -213,7 +211,7 @@ class Terminos extends StatelessWidget {
           Widget build(BuildContext context) {
             return Column(
               children:[
-                Text('Al registrarse acepta los', textAlign: TextAlign.center, style: TextStyle(
+                const Text('Al registrarse acepta los', textAlign: TextAlign.center, style: TextStyle(
         color: Color.fromRGBO(28, 2, 64, 1),
         fontFamily: 'Poppins',
         fontSize: 13,
@@ -221,7 +219,7 @@ class Terminos extends StatelessWidget {
         fontWeight: FontWeight.normal,
         height: 1.5 /*PERCENT not supported*/
       ),),
-      Text('terminos y política de privacidad', textAlign: TextAlign.center, style: TextStyle(
+      const Text('terminos y política de privacidad', textAlign: TextAlign.center, style: TextStyle(
         color: Color.fromRGBO(28, 2, 64, 1),
         fontFamily: 'Poppins',
         fontSize: 13,
@@ -239,7 +237,7 @@ class Ini extends StatelessWidget {
           Widget build(BuildContext context) {
             return Column(
               children:[
-                Text('¿Ya tienes cuenta?', textAlign: TextAlign.center, style: TextStyle(
+                const Text('¿Ya tienes cuenta?', textAlign: TextAlign.center, style: TextStyle(
         color: Color.fromRGBO(28, 2, 64, 1),
         fontFamily: 'Poppins',
         fontSize: 16,
@@ -247,7 +245,7 @@ class Ini extends StatelessWidget {
         fontWeight: FontWeight.normal,
         height: 1.5 /*PERCENT not supported*/
       ),),
-      Text('Inicia sesión', textAlign: TextAlign.center, style: TextStyle(
+      const Text('Inicia sesión', textAlign: TextAlign.center, style: TextStyle(
         color: Color.fromRGBO(28, 2, 64, 1),
         fontFamily: 'Poppins',
         fontSize: 16,
