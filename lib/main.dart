@@ -14,7 +14,6 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       title: 'Material App',
       home: Scaffold(
-        //body:_paginaactual==0? PaginaHome(): PaginaUser(), solo sirve si son dos paginas
         body: Landing(),
       ),
     );
