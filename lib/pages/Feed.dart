@@ -35,7 +35,7 @@ Widget cuerpo() {
             Icon(Icons.image_outlined, color: Color(0xff826AD9)),
             Icon(Icons.gif_sharp, color: Color(0xff826AD9)),
             Icon(Icons.image_aspect_ratio, color: Color(0xff826AD9)),
-            Icon(Icons.image_outlined, color: Color(0xff826AD9)),
+            Icon(Icons.imagesearch_roller_rounded, color: Color(0xff826AD9)),
             Align(alignment: Alignment(0.9, -0.5), child: PublicRoute()),
           ],
         ),
