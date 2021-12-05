@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'Feed.dart';
 import 'Registro.dart';
 import 'chatfeed.dart';
+import 'CryptoMarket.dart';
 
 class Ingresado extends StatefulWidget {
   const Ingresado({Key? key}) : super(key: key);
@@ -19,7 +20,7 @@ class HomeState extends State<Ingresado> {
   int _paginaactual = 0;
   List<Widget> _paginas = [
     Feed(),
-    Registro(),
+    CryptoMarket(),
     Registro(),
     Registro(),
     chatfeed(),
@@ -48,6 +49,7 @@ class HomeState extends State<Ingresado> {
                   icon: Icon(Icons.blur_circular_outlined,
                       color: Color(0xff211818)),
                   label: "CryptoMarket"),
+
               BottomNavigationBarItem(
                   icon: Icon(Icons.message_rounded, color: Color(0xff211818)),
                   label: "Mensajes"),

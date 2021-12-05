@@ -1,8 +1,10 @@
 import 'package:blockchain_pal/pages/Landing.dart';
 import 'package:flutter/material.dart';
+
 void main() => runApp(MyApp());
 
-class MyApp extends StatefulWidget { //para convertir de sin estado a con estado pulsar ctrl+.
+class MyApp extends StatefulWidget {
+  //para convertir de sin estado a con estado pulsar ctrl+.
   @override
   State<MyApp> createState() => _MyAppState();
 }
