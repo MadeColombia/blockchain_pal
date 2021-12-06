@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'Feed.dart';
 import 'Registro.dart';
 import 'chatfeed.dart';
@@ -20,8 +21,11 @@ class HomeState extends State<Ingresado> {
   int _paginaactual = 0;
   List<Widget> _paginas = [
     Feed(),
+<<<<<<< Updated upstream
     CryptoMarket(),
     Registro(),
+=======
+>>>>>>> Stashed changes
     Registro(),
     chatfeed(),
   ];
@@ -46,8 +50,7 @@ class HomeState extends State<Ingresado> {
                   icon: Icon(Icons.home_filled, color: Color(0xff211818)),
                   label: "Feed"),
               BottomNavigationBarItem(
-                  icon: Icon(Icons.blur_circular_outlined,
-                      color: Color(0xff211818)),
+                  icon: Icon(Icons.dashboard_rounded, color: Color(0xff211818)),
                   label: "CryptoMarket"),
 
               BottomNavigationBarItem(
