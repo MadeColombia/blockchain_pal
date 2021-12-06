@@ -32,7 +32,11 @@ Widget cuerpo() {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            Icon(Icons.image_outlined, color: Color(0xff826AD9)),
+            //Icon(Icons.image_outlined, color: Color(0xff826AD9)),
+            IconButton(
+              icon: Icon(Icons.image, color: Color(0xff826AD9)),
+              onPressed: () {},
+            ),
             Icon(Icons.gif_sharp, color: Color(0xff826AD9)),
             Icon(Icons.image_aspect_ratio, color: Color(0xff826AD9)),
             Icon(Icons.imagesearch_roller_rounded, color: Color(0xff826AD9)),
@@ -47,21 +51,32 @@ Widget cuerpo() {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                Text(
-                  "Erick Lawrence",
-                  style: TextStyle(fontSize: 20),
+                Container(
+                  color: Colors.white,
+                  height: 20,
+                  width: 350,
+                  child: Text(
+                    "Erick Lawrence",
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
                 ),
-                Text(
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit."),
-                Text("sit amet maximus libero blandit non. Integer quis.."),
-                Text("sit amet maximus libero blandit non. Integer quis.."),
-                Text("sit amet maximus libero blandit non. Integer quis.."),
-                Text("sit amet maximus libero blandit non. Integer quis.."),
+                Container(
+                  color: Colors.white,
+                  height: 70,
+                  width: 350,
+                  child: Text(
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sodales molestie elit, sit amet maximus libero blandit non. Integer quis tortor justo. ",
+                    style: TextStyle(fontSize: 16),
+                  ),
+                )
               ],
             )
           ],
         ),
-        const SizedBox(height: 30),
+        const SizedBox(height: 40),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
@@ -69,21 +84,32 @@ Widget cuerpo() {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                Text(
-                  "Hilman Nuris",
-                  style: TextStyle(fontSize: 20),
+                Container(
+                  color: Colors.white,
+                  height: 20,
+                  width: 350,
+                  child: Text(
+                    "Hilman Nuris",
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
                 ),
-                Text(
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit."),
-                Text("sit amet maximus libero blandit non. Integer quis.."),
-                Text("sit amet maximus libero blandit non. Integer quis.."),
-                Text("sit amet maximus libero blandit non. Integer quis.."),
-                Text("sit amet maximus libero blandit non. Integer quis.."),
+                Container(
+                  color: Colors.white,
+                  height: 70,
+                  width: 350,
+                  child: Text(
+                    "Sendhil Mullainathan y Eldar Shafir, en su libro “Escasez: ¿Por qué tener tan poco significa tanto?”, publicado en español por el Fondo de Cultura Económica, resumen buena parte de la investigación más reciente sobre los efectos que tiene la escasez en la toma de decisiones. ",
+                    style: TextStyle(fontSize: 16),
+                  ),
+                )
               ],
             )
           ],
         ),
-        const SizedBox(height: 30),
+        const SizedBox(height: 40),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
@@ -91,16 +117,27 @@ Widget cuerpo() {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                Text(
-                  "Jennifer Dunn",
-                  style: TextStyle(fontSize: 20),
+                Container(
+                  color: Colors.white,
+                  height: 20,
+                  width: 350,
+                  child: Text(
+                    "Jennifer Dunn",
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
                 ),
-                Text(
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit."),
-                Text("sit amet maximus libero blandit non. Integer quis.."),
-                Text("sit amet maximus libero blandit non. Integer quis.."),
-                Text("sit amet maximus libero blandit non. Integer quis.."),
-                Text("sit amet maximus libero blandit non. Integer quis.."),
+                Container(
+                  color: Colors.white,
+                  height: 70,
+                  width: 350,
+                  child: Text(
+                    "México ha olvidado lecciones fundamentales de su propia historia y sus éxitos y fracasos en el camino hacia el desarrollo ",
+                    style: TextStyle(fontSize: 16),
+                  ),
+                )
               ],
             )
           ],
