@@ -56,7 +56,7 @@ Widget cuerpo() {
                   height: 20,
                   width: 350,
                   child: Text(
-                    "Erick Lawrence",
+                    "Erick sLawrence",
                     style: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,

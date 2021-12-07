@@ -1,6 +1,8 @@
 import 'package:blockchain_pal/pages/Landing.dart';
 import 'package:flutter/material.dart';
 import 'Ingresado.dart';
+import 'package:blockchain_pal/domain/models/controller.dart';
+import 'package:get/get.dart';
 
 class CryptoMarket extends StatefulWidget {
   const CryptoMarket({Key? key}) : super(key: key);
@@ -11,7 +13,10 @@ class CryptoMarket extends StatefulWidget {
 class HomeState extends State<CryptoMarket> {
   @override
   Widget build(BuildContext context) {
-    return (Scaffold(body: cuerpo()));
+    return (Scaffold(
+        body: Column(
+      children: [cuerpo(), cambio1()],
+    )));
   }
 }
 
@@ -22,10 +27,9 @@ Widget cuerpo() {
           child: Center(
               child: Column(children: <Widget>[
         const SizedBox(height: 70),
-        mensaje(),
+        tituloCrypto(),
         //row buscar monedas y busqueda
         Row(
-          //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
             const SizedBox(width: 20),
             Expanded(child: buscarMoneda()),
@@ -56,28 +60,60 @@ Widget cuerpo() {
             ),
           ],
         ),
-        const SizedBox(
-          height: 20,
-        ),
-        CryptoRoute(),
-        const SizedBox(
-          height: 20,
-        ),
-        CryptoRoute1(),
-        const SizedBox(
-          height: 20,
-        ),
-        CryptoRoute2(),
-        const SizedBox(
-          height: 20,
-        ),
-        CryptoRoute3()
       ]))),
     ],
   );
 }
 
-Widget mensaje() {
+Widget cambio1() {
+  MyConttroller myConttroller = Get.find();
+  return Column(
+    children: [
+      Padding(
+        padding: EdgeInsets.all(8.0),
+        child: Obx(() => Column(
+              children: [
+                myConttroller.change ? favoritos() : todos(),
+              ],
+            )),
+      ),
+    ],
+  );
+}
+
+Widget favoritos() {
+  return Column(
+    children: [
+      CryptoRoute(),
+      const SizedBox(
+        height: 20,
+      ),
+      CryptoRoute1(),
+    ],
+  );
+}
+
+Widget todos() {
+  return Column(
+    children: [
+      CryptoRoute(),
+      const SizedBox(
+        height: 20,
+      ),
+      CryptoRoute1(),
+      const SizedBox(
+        height: 20,
+      ),
+      CryptoRoute2(),
+      const SizedBox(
+        height: 20,
+      ),
+      CryptoRoute3(),
+    ],
+  );
+}
+
+Widget tituloCrypto() {
   return Center(
       child: Container(
           width: 346,
@@ -125,7 +161,6 @@ Widget iconoNoti() {
 
 Widget buscarMoneda() {
   return Container(
-    //padding: const EdgeInsets.symmetric(horizontal: 1, vertical: 1),
     child: TextField(
       decoration: InputDecoration(
         hintText: "Buscar moneda",
@@ -143,13 +178,13 @@ Widget buscarMoneda() {
 class FavoritasRoute extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    MyConttroller myConttroller = Get.find();
     return MaterialButton(
       minWidth: 100,
       height: 30,
       // ignore: avoid_print
       onPressed: () => {
-        // Navigator.push(context,
-        //  MaterialPageRoute(builder: (context) => const CryptoMarket())),
+        myConttroller.cambioChange(),
       },
       color: Color(0xffa89abd).withOpacity(0.7),
       child: const Text("Favoritas", style: TextStyle(color: Colors.white)),
@@ -163,13 +198,12 @@ class FavoritasRoute extends StatelessWidget {
 class TodasRoute extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    MyConttroller myConttroller = Get.find();
     return MaterialButton(
       minWidth: 100,
       height: 30,
-      // ignore: avoid_print
       onPressed: () => {
-        // Navigator.push(context,
-        //  MaterialPageRoute(builder: (context) => const CryptoMarket())),
+        myConttroller.cambioChange(),
       },
       color: Color(0xffa89abd).withOpacity(0.7),
       child: const Text("Todas", style: TextStyle(color: Colors.white)),
@@ -183,13 +217,12 @@ class TodasRoute extends StatelessWidget {
 class HotRoute extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    MyConttroller myConttroller = Get.find();
     return MaterialButton(
       minWidth: 100,
       height: 30,
-      // ignore: avoid_print
       onPressed: () => {
-        // Navigator.push(context,
-        //  MaterialPageRoute(builder: (context) => const CryptoMarket())),
+        myConttroller.cambioChange(),
       },
       color: Color(0xffa89abd).withOpacity(0.7),
       child: const Text(
@@ -207,21 +240,14 @@ class CryptoRoute extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialButton(
-      elevation: 5,
       minWidth: 380,
       height: 70,
-      // ignore: avoid_print
-      onPressed: () => {
-        // Navigator.push(context,
-        //  MaterialPageRoute(builder: (context) => const CryptoMarket())),
-      },
+      onPressed: () => {},
       color: Color(0xfff6f7fa).withOpacity(0.7),
-
       child: const Text(
         "BTC                                \u0024 57,609.85",
         style: TextStyle(color: Colors.black, fontSize: 18),
       ),
-
       shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(5.0),
           side: BorderSide(color: Color(0xff826AD9).withOpacity(0.4))),
@@ -235,18 +261,12 @@ class CryptoRoute1 extends StatelessWidget {
     return MaterialButton(
       minWidth: 380,
       height: 70,
-      // ignore: avoid_print
-      onPressed: () => {
-        // Navigator.push(context,
-        //  MaterialPageRoute(builder: (context) => const CryptoMarket())),
-      },
+      onPressed: () => {},
       color: Color(0xfff6f7fa).withOpacity(0.7),
-
       child: const Text(
         "ETH                                 \u0024 4,302.38",
         style: TextStyle(color: Colors.black, fontSize: 18),
       ),
-
       shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(5.0),
           side: BorderSide(color: Color(0xff826AD9).withOpacity(0.4))),
@@ -260,18 +280,12 @@ class CryptoRoute2 extends StatelessWidget {
     return MaterialButton(
       minWidth: 380,
       height: 70,
-      // ignore: avoid_print
-      onPressed: () => {
-        // Navigator.push(context,
-        //  MaterialPageRoute(builder: (context) => const CryptoMarket())),
-      },
+      onPressed: () => {},
       color: Color(0xfff6f7fa).withOpacity(0.7),
-
       child: const Text(
         "BNB                                   \u0024 302.38",
         style: TextStyle(color: Colors.black, fontSize: 18),
       ),
-
       shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(5.0),
           side: BorderSide(color: Color(0xff826AD9).withOpacity(0.4))),
@@ -285,18 +299,12 @@ class CryptoRoute3 extends StatelessWidget {
     return MaterialButton(
       minWidth: 380,
       height: 70,
-      // ignore: avoid_print
-      onPressed: () => {
-        // Navigator.push(context,
-        //  MaterialPageRoute(builder: (context) => const CryptoMarket())),
-      },
+      onPressed: () => {},
       color: Color(0xfff6f7fa).withOpacity(0.7),
-
       child: const Text(
         "LTC                                     \u0024 208.38",
         style: TextStyle(color: Colors.black, fontSize: 18),
       ),
-
       shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(5.0),
           side: BorderSide(color: Color(0xff826AD9).withOpacity(0.4))),
