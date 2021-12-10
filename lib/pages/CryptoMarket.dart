@@ -153,7 +153,7 @@ Widget iconoNoti() {
       Icon(
         Icons.notifications,
         color: Color(0xff826AD9),
-        size: 50,
+        size: 35,
       ),
     ]),
   );
@@ -187,7 +187,8 @@ class FavoritasRoute extends StatelessWidget {
         myConttroller.cambioChange(),
       },
       color: Color(0xffa89abd).withOpacity(0.7),
-      child: const Text("Favoritas", style: TextStyle(color: Colors.white)),
+      child: const Text("Favoritas",
+          style: TextStyle(color: Colors.white, fontSize: 12)),
       shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20.0),
           side: BorderSide(color: Color(0xff826AD9).withOpacity(0.4))),
@@ -249,7 +250,7 @@ class CryptoRoute extends StatelessWidget {
         style: TextStyle(color: Colors.black, fontSize: 18),
       ),
       shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(5.0),
+          borderRadius: BorderRadius.circular(10.0),
           side: BorderSide(color: Color(0xff826AD9).withOpacity(0.4))),
     );
   }
@@ -268,7 +269,7 @@ class CryptoRoute1 extends StatelessWidget {
         style: TextStyle(color: Colors.black, fontSize: 18),
       ),
       shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(5.0),
+          borderRadius: BorderRadius.circular(10.0),
           side: BorderSide(color: Color(0xff826AD9).withOpacity(0.4))),
     );
   }
@@ -287,7 +288,7 @@ class CryptoRoute2 extends StatelessWidget {
         style: TextStyle(color: Colors.black, fontSize: 18),
       ),
       shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(5.0),
+          borderRadius: BorderRadius.circular(10.0),
           side: BorderSide(color: Color(0xff826AD9).withOpacity(0.4))),
     );
   }
@@ -306,7 +307,7 @@ class CryptoRoute3 extends StatelessWidget {
         style: TextStyle(color: Colors.black, fontSize: 18),
       ),
       shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(5.0),
+          borderRadius: BorderRadius.circular(10.0),
           side: BorderSide(color: Color(0xff826AD9).withOpacity(0.4))),
     );
   }

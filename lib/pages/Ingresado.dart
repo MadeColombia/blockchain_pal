@@ -21,8 +21,6 @@ class HomeState extends State<Ingresado> {
   List<Widget> _paginas = [
     Feed(),
     CryptoMarket(),
-    Registro(),
-    Registro(),
     chatfeed(),
   ];
   @override
