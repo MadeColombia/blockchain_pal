@@ -26,20 +26,18 @@ Widget cuerpo() {
       Container(
           child: Center(
               child: Column(children: <Widget>[
-        const SizedBox(height: 70),
+        const SizedBox(height: 50),
         tituloCrypto(),
+        const SizedBox(height: 10),
         //row buscar monedas y busqueda
         Row(
           children: <Widget>[
-            const SizedBox(width: 20),
+            const SizedBox(width: 10),
             Expanded(child: buscarMoneda()),
-            Icon(
-              Icons.search,
-              color: Color(0xff826AD9),
-              size: 40,
-            ),
+            const SizedBox(width: 10),
           ],
         ),
+        const SizedBox(height: 10),
         //row favoritos todas hot
         Row(
           children: [
@@ -163,9 +161,21 @@ Widget buscarMoneda() {
   return Container(
     child: TextField(
       decoration: InputDecoration(
+        border: OutlineInputBorder(
+          borderSide: BorderSide.none,
+          borderRadius: BorderRadius.circular(10),
+        ),
         hintText: "Buscar moneda",
         fillColor: Color(0xfff6f7fa),
         filled: true,
+        //border: InputBorder.none,
+        hintStyle:
+            TextStyle(fontSize: 17, color: Color.fromRGBO(157, 159, 160, 1)),
+        suffixIcon: Icon(
+          Icons.search,
+          color: Color(0xff826AD9),
+          size: 30,
+        ),
       ),
       minLines:
           1, // any number you need (It works as the rows for the textarea)

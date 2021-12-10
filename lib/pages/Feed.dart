@@ -27,7 +27,12 @@ Widget cuerpo() {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
-            Image.asset('images/perfil.png'),
+            Container(
+              margin: EdgeInsets.only(top: 10.0, bottom: 10.0, left: 20.0),
+            ),
+            Image.asset(
+              'images/perfil.png',
+            ),
             Expanded(child: estado()),
           ],
         ),
@@ -57,12 +62,15 @@ Widget cambio1() {
 
 Widget estado() {
   return Container(
-    padding: const EdgeInsets.symmetric(horizontal: 1, vertical: 1),
+    padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 1),
     child: const TextField(
       decoration: InputDecoration(
         hintText: "Que estás pensando?",
-        fillColor: Colors.white,
+        fillColor: Colors.transparent,
+        hintStyle:
+            TextStyle(fontSize: 20, color: Color.fromRGBO(157, 159, 160, 1)),
         filled: true,
+        border: InputBorder.none,
       ),
       minLines:
           2, // any number you need (It works as the rows for the textarea)
@@ -120,7 +128,7 @@ class feedRoute extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Container(
-              color: Colors.white,
+              color: Colors.transparent,
               height: 20,
               width: 300,
               child: Text(
@@ -132,7 +140,7 @@ class feedRoute extends StatelessWidget {
               ),
             ),
             Container(
-              color: Colors.white,
+              color: Colors.transparent,
               height: 70,
               width: 300,
               child: Text(
@@ -158,7 +166,7 @@ class feedRoute1 extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Container(
-              color: Colors.white,
+              color: Colors.transparent,
               height: 20,
               width: 300,
               child: Text(
@@ -170,7 +178,7 @@ class feedRoute1 extends StatelessWidget {
               ),
             ),
             Container(
-              color: Colors.white,
+              color: Colors.transparent,
               height: 70,
               width: 300,
               child: Text(
@@ -196,7 +204,7 @@ class feedRoute2 extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Container(
-              color: Colors.white,
+              color: Colors.transparent,
               height: 20,
               width: 300,
               child: Text(
@@ -208,7 +216,7 @@ class feedRoute2 extends StatelessWidget {
               ),
             ),
             Container(
-              color: Colors.white,
+              color: Colors.transparent,
               height: 70,
               width: 300,
               child: Text(
