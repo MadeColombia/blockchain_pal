@@ -13,52 +13,54 @@ class CryptoMarket extends StatefulWidget {
 class HomeState extends State<CryptoMarket> {
   @override
   Widget build(BuildContext context) {
-    return (Scaffold(
-        body: Column(
-      children: [cuerpo(), cambio1()],
-    )));
+    return (Scaffold(body: cuerpo()));
   }
 }
 
 Widget cuerpo() {
-  return Column(
-    children: [
-      Container(
-          child: Center(
-              child: Column(children: <Widget>[
-        const SizedBox(height: 50),
-        tituloCrypto(),
-        const SizedBox(height: 10),
-        //row buscar monedas y busqueda
-        Row(
-          children: <Widget>[
-            const SizedBox(width: 10),
-            Expanded(child: buscarMoneda()),
-            const SizedBox(width: 10),
-          ],
-        ),
-        const SizedBox(height: 10),
-        //row favoritos todas hot
-        Row(
-          children: [
-            const SizedBox(
-              width: 10,
+  return ListView(
+    children: <Widget>[
+      Column(
+        children: [
+          Container(
+              child: Center(
+                  child: Column(children: <Widget>[
+            const SizedBox(height: 50),
+            tituloCrypto(),
+            const SizedBox(height: 10),
+            //row buscar monedas y busqueda
+            Row(
+              children: <Widget>[
+                const SizedBox(width: 10),
+                Expanded(child: buscarMoneda()),
+                const SizedBox(width: 10),
+              ],
             ),
-            Expanded(child: FavoritasRoute()),
-            const SizedBox(
-              width: 10,
+            const SizedBox(height: 10),
+            //row favoritos todas hot
+            Row(
+              children: [
+                const SizedBox(
+                  width: 10,
+                ),
+                Expanded(child: FavoritasRoute()),
+                const SizedBox(
+                  width: 10,
+                ),
+                Expanded(child: TodasRoute()),
+                const SizedBox(
+                  width: 100,
+                ),
+                Expanded(child: HotRoute()),
+                const SizedBox(
+                  width: 20,
+                ),
+              ],
             ),
-            Expanded(child: TodasRoute()),
-            const SizedBox(
-              width: 100,
-            ),
-            Expanded(child: HotRoute()),
-            const SizedBox(
-              width: 20,
-            ),
-          ],
-        ),
-      ]))),
+          ]))),
+          cambio1(),
+        ],
+      )
     ],
   );
 }

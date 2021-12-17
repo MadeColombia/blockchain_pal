@@ -18,28 +18,32 @@ class HomeState extends State<Feed> {
 }
 
 Widget cuerpo() {
-  return Column(
-    children: [
-      Container(
-          child: Center(
-              child: Column(children: <Widget>[
-        const SizedBox(height: 50),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: <Widget>[
-            Container(
-              margin: EdgeInsets.only(top: 10.0, bottom: 10.0, left: 20.0),
+  return ListView(
+    children: <Widget>[
+      Column(
+        children: [
+          Container(
+              child: Center(
+                  child: Column(children: <Widget>[
+            const SizedBox(height: 50),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                Container(
+                  margin: EdgeInsets.only(top: 10.0, bottom: 10.0, left: 20.0),
+                ),
+                Image.asset(
+                  'images/perfil.png',
+                ),
+                Expanded(child: estado()),
+              ],
             ),
-            Image.asset(
-              'images/perfil.png',
-            ),
-            Expanded(child: estado()),
-          ],
-        ),
-        iconEstado(),
-        const SizedBox(height: 50),
-        cambio1(),
-      ]))),
+            iconEstado(),
+            const SizedBox(height: 50),
+            cambio1(),
+          ]))),
+        ],
+      )
     ],
   );
 }

@@ -16,7 +16,7 @@ class chat extends StatelessWidget {
             ));
     return Scaffold(
       appBar: buildAppBar(context),
-      body: buildBody(),
+      body: buildBody1(),
     );
   }
 
@@ -101,8 +101,8 @@ class chat extends StatelessWidget {
               children: <Widget>[
                 const SizedBox(height: 30),
                 Container(
-                  width: 370,
-                  height: 540,
+                  width: 450,
+                  height: 450,
                   //color: Colors.orange,
                 ),
                 SingleChildScrollView(
@@ -147,4 +147,64 @@ class chat extends StatelessWidget {
       ],
     );
   }
+}
+
+buildBody1() {
+  return ListView(
+    children: <Widget>[
+      Column(
+        children: [
+          Container(
+            child: Center(
+              child: Column(
+                children: <Widget>[
+                  const SizedBox(height: 30),
+                  Container(
+                    width: 450,
+                    height: 450,
+                    //color: Colors.orange,
+                  ),
+                  SingleChildScrollView(
+                    child: Container(
+                      margin: EdgeInsets.only(
+                          top: 10.0, bottom: 10.0, left: 20.0, right: 20.0),
+                      child: TextField(
+                        decoration: InputDecoration(
+                          border: OutlineInputBorder(
+                            borderSide: BorderSide.none,
+                            borderRadius: BorderRadius.circular(30),
+                          ),
+                          hintText: "Mensaje",
+                          hintStyle: TextStyle(
+                              fontSize: 17,
+                              color: Color.fromRGBO(157, 159, 160, 1)),
+                          fillColor: Color(0xfff6f7fa),
+                          filled: true,
+                          //border: InputBorder.none,
+                          prefixIcon: Icon(
+                            Icons.emoji_emotions_outlined,
+                            color: Color(0xff826AD9),
+                            size: 28,
+                          ),
+                          suffixIcon: Icon(
+                            Icons.send,
+                            color: Color(0xff826AD9),
+                            size: 28,
+                          ),
+                        ),
+                        minLines:
+                            1, // any number you need (It works as the rows for the textarea)
+                        keyboardType: TextInputType.multiline,
+                        maxLines: null,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ],
+      )
+    ],
+  );
 }
