@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'chat.dart';
-import 'listaMensajes.dart';
 import 'package:path/path.dart';
 
 class chatfeed extends StatelessWidget {
@@ -67,25 +66,11 @@ class chatfeed extends StatelessWidget {
                         margin: EdgeInsets.only(
                             top: 50.0, bottom: 10.0, left: 120.0),
                       ),
-
-                      IconButton(
-                        icon: Icon(Icons.notifications),
-                        iconSize: 35,
+                      Icon(
+                        Icons.notifications,
                         color: Color(0xff826AD9),
-                        onPressed: () {
-                          print("object");
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (BuildContext context) => chat()));
-                        },
+                        size: 35,
                       ),
-
-                      //Icon(
-                      //Icons.notifications,
-                      //color: Color(0xff826AD9),
-                      //size: 35,
-                      //),
                     ],
                   ),
                   //EMPIEZA BARRA DE BUSQUEDA
@@ -127,7 +112,7 @@ class chatfeed extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => ListaMensajes(),
+                          builder: (context) => chat(),
                         ),
                       );
                     },
