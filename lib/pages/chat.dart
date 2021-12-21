@@ -271,6 +271,10 @@ class _chatState extends State<chat> {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     value = men;
     prefs.setString("value", value);
+
+    //int value2 = 0;
+    //value2 = col;
+    //prefs.setInt("value1", value2);
   }
 
   _cargarPreferencias2() async {
